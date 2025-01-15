@@ -1,0 +1,37 @@
+Q: Beyond identifying bottlenecks like high response time, what other factors do you consider when analyzing performance test results?
+A: In addition to response time, I analyze metrics like throughput (requests processed per unit time), concurrency (number of users accessing the system simultaneously), resource utilization (CPU, memory, network), and error rates. This holistic view helps identify scalability issues, stability under load, and potential infrastructure bottlenecks.
+
+Q: How do you approach performance testing for a message-based application compared to a web application?
+A: For message-based applications, I focus on message volume, latency (message delivery time), and message queuing behavior. Tools like JMeter can be used to simulate message queues and analyze message throughput. For web applications, the focus is on response times for user interactions, page load times, and concurrent user handling. Tools like LoadRunner or Gatling are often used for web application performance testing.
+
+Q: Explain the concept of "Little's Law" and how it's used in performance testing.
+A: Little's Law states that the average number of users in a system (L) is equal to the system's throughput (T) multiplied by the average response time (R). This law helps us estimate expected user load based on desired response times and vice versa. It's crucial for designing realistic performance test scenarios.
+
+Q: When defining performance goals, what factors influence the choice of acceptable response times or user load limits?
+A: Industry standards, user expectations, application type, and business needs all influence performance goals. For example, an e-commerce website might target a 2-second response time for product searches, while an internal reporting tool could have a slightly higher tolerance.
+
+Q: How do you determine the scope of performance testing for a large and complex application?
+A: I follow an 80/20 rule approach, prioritizing performance testing for core functionalities used by 80% of users. Additionally, I focus on business-critical transactions and identify performance bottlenecks from previous releases. Performance testing tools often allow for scenario scripting to test specific user journeys.
+
+Q: Describe the difference between normal, peak, future peak, and endurance load testing.
+A: Normal Load: Simulates typical user load patterns observed in production.
+Peak Load: Simulates high user traffic periods like holiday sales or promotional events.
+Future Peak Load: Estimates how the system will perform under anticipated future user growth.
+Endurance Load: Applies sustained load over a long duration to assess system stability and identify potential resource exhaustion issues.
+
+Q: When scripting performance tests, what are the advantages and disadvantages of using HTML-based recording versus URL-based recording?
+A: HTML-based recording:
+Advantages: Captures all user interactions in a single request, simplifies scripting.
+Disadvantages: Might miss additional requests for resources like images or scripts.
+URL-based recording:
+Advantages: Captures every individual request and response, providing more granular detail.
+Disadvantages: Can lead to complex scripts due to numerous captured requests.
+
+Q: How do you handle unexpected code drops or critical defects during performance testing execution?
+A: I prioritize fixing critical defects before proceeding with performance testing. For unexpected code drops, I communicate the issue to developers and stakeholders. Depending on the severity, I might postpone testing or adjust the scope to exclude impacted functionalities.
+
+Q: Describe your experience using performance testing tools for different types of applications (web, mobile, API).
+A: (Discuss your experience with specific tools like JMeter, LoadRunner, Gatling, etc., mentioning their suitability for different application types.)
+
+Q: Share a challenging performance testing scenario you encountered and how you addressed it.
+A: (Provide a specific example from your experience, detailing the challenge, your troubleshooting approach, and the solution implemented.)
