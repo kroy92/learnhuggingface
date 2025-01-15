@@ -10,4 +10,4 @@ def visual_answer_question(question, context):
 
 
 if __name__ == "__main__":
-    visual_answer_question(["What is the color of the fruit?","what is this fruit"], "test-images/IMG_TEST_1.jpg")
+    visual_answer_question(["What is the color of the fruit?","what is this fruit"], "../test-images/IMG_TEST_1.jpg")

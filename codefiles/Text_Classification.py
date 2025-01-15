@@ -25,7 +25,7 @@ def zero_shot_classification():
 
 
 def abstractive_summary():
-    with open('QA.txt', 'r') as file:
+    with open('../QA.txt', 'r') as file:
         text = file.read()
     chunk_size = len(text) // 4
     chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]

@@ -7,10 +7,10 @@ import os
 
 def transform_image():
 
-    files= os.listdir('test-images')
+    files= os.listdir('../test-images')
     all_cis = []
     for file in files:
-        original_image = Image.open(f'test-images/{file}')
+        original_image = Image.open(f'../test-images/{file}')
         image_array = np.array(original_image)
         #ci = image_transforms.center_crop(image=image_array, size=(800, 800))
         all_cis.append(image_array)
