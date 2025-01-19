@@ -1,5 +1,5 @@
 import librosa
-from datasets import load_dataset
+from datasets import load_dataset , Audio
 from transformers import pipeline
 
 
@@ -19,6 +19,8 @@ def load_and_preprocess_dataset(dataset_name, split='test', min_duration=30):
 	# Add duration column
 	print("Adding duration column...")
 	songs = songs.add_column("duration", durations)
+	songs = songs.cast_column("audio",Audio(sampling_rate=16000))
+	print("Dataset Changed. Example:", songs[0])
 
 	# Filter songs by duration
 	print("Filtering songs longer than", min_duration, "seconds...")
